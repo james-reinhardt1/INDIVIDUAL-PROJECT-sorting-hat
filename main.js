@@ -52,7 +52,12 @@ const renderToDom = (divId, textToRender) => {
   selectedElement.innerHTML = textToRender;
 };
 
-
+mainPage.addEventListener('click', (event) => {
+  if (event.target.id === "ravenclawBtn") {
+    const allRavenclaws = filter(students, 'Ravenclaw');
+    cardsOnDom("#cards", allRavenclaws);
+  }; 
+});
 
 
 // *** PRE-MADE CARDS/OBJECTS TO SHOW IN DIV BEFORE ENTERING IN NEW 
@@ -82,7 +87,7 @@ const startingPage = () => {
     <img src="https://aux2.iconspalace.com/uploads/447401561.png" class="card-img-top" alt="Sorting Hat">
     <div class="firstCard-body">
       <h5 class="talkingSortingHat">Welcome! Lets make you a wizard!</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text">Lets get wizarding!</p>
       <a href="#" id="welcomeBtn" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>`;
@@ -107,7 +112,9 @@ const sortingForm = () => {
     <button type="button" class="btn btn-warning">Army of Darkness</button>
     <button type="button" class="btn btn-info">All</button>
   </div>
-</form>`
+</form>`;
+welcomeDiv.style.display = 'none';
+renderToDom('#mainPage', domString);
 }
 
 
@@ -179,6 +186,8 @@ const sortingForm = () => {
 //   if (e.target.id)
 // })
 
+
+
 const xFiles = (event) => {
 if (event.target.id === "welcomeBtn") {
 console.log('Hey there!');
@@ -189,12 +198,17 @@ console.log(event.target.id);
 
 
 
+
 // *** Creates a new student card
 // page.addEventListener('submit', newStudent)
 // //  *** Filters for the House Buttons
 // page.addEventListener('click', houseFilter)
 
-openingPageDiv.addEventListener('click', xFiles);
+openingPageDiv.addEventListener('click', event => {
+  if (event.target.id === "welcomeBtn") {
+    sortingForm();
+  };
+});
 
 // *** Initial Page Loadout
 const startApp = () => {
@@ -205,6 +219,10 @@ const startApp = () => {
 startApp();
 
 
-
+// *** Remember that whatever event listener is attached to is something that's existing in HTML 
+// *** Cant add event listener without
 // *** FUNCTIONS CAN ALWAYS LIVE OUTSIDE OF EVENT.LISTENER
 // *** GOOD PRACTICE KEEPS IT CLEAN
+// *** Learn event listener and callback function, check out youtube player project for link to youtube explanation
+// *** REWATCH ARRAY METHODS VIDEO TO UNDERSTAND
+// *** READ MORE ABOUT EVENT BUBBLING
