@@ -34,6 +34,15 @@ const voldemortArray = [
   }
 ];
 
+const studentsAssignedToSchool = [];
+const specialSkills = ["Disappears", "Blows Fire", "Summons Dragon"];
+
+// *** Functions    (divID) Whatever Div I'm targeting        (textToRender) Looking for string of HTML
+const renderToDom = (divId, htmlToRender) => {
+  const selectedElement = document.querySelector(divId);
+  selectedElement.innerHTML = htmlToRender;
+};
+
 // declaring as a variable. 
 const openingPageDiv = document.querySelector('#openingPage');
 const  mainPageDiv = document.querySelector('#mainPage');
@@ -44,21 +53,65 @@ const badCardsDiv = document.querySelector ('#badCards');
 const welcomeBtn = document.querySelector ('#welcomeBtn');
 
 
+const studentsNeedASchoolOnDom = (array) => {
+  let domString = "";
 
+  for (const wizards of array) {
+    domString += `
+    <div class="card" style="width: 12rem; margin: 5px;">
+    <div class="card-body">
+      <h5 class="card-title">${wizards.name.toUpperCase()}</h5>
+      <p class="card-text">Special Skill: ${wizards.house}</p>
+      <button class="btn btn-success" id="expell--${wizards.id}">EXPELL</button>
+    </div>
+  </div>`
+  }
 
-// *** Functions    (divID) Whatever Div I'm targeting        (textToRender) Looking for string of HTML
-const renderToDom = (divId, textToRender) => {
-  const selectedElement = document.querySelector(divId);
-  selectedElement.innerHTML = textToRender;
+  renderToDom("#goodCards", domString);
+}
+
+const expelledStudentsOnDom = (array) => {
+  let domString = "";
+
+  for (const wizards of array) {
+    domString += `
+  <div class="card" style="width: 18rem;">
+    <h5 class="card-header">${wizards.name.toUpperCase()}</h5>
+    <p class="list-group-item pet-color card">${wizards.house}</p>
+    <button class="btn btn-success" id="expell--${wizards.id}">
+    Expell </button> 
+  </div> `;
+  };
+
+  renderToDom("#badCards", domString);
 };
 
+
+
+// const createId = (array) => {
+//   if (array.length) {
+//     const idArray = [];
+//     for (const el of array) {
+//       idArray.push(el.id);
+//     }
+//     return Math.max(...idArray) + 1;
+//   } else {
+//     return 0;
+//   }
+// }
+
+
+
+
 mainPage.addEventListener('click', (event) => {
-  if (event.target.id === "ravenclawBtn") {
-    const allRavenclaws = filter(students, 'Ravenclaw');
-    cardsOnDom("#cards", allRavenclaws);
+  if (event.target.id === "welcomeBtn") {
+    const welcomeButton = filter(students, 'welcomeBtn');
+    cardsOnDom("#welcomeBtn", welcomeButton);
   }; 
 });
 
+//for filter buttons 
+// const mainPage = document.querySelector('#mainpg'); 
 
 // *** PRE-MADE CARDS/OBJECTS TO SHOW IN DIV BEFORE ENTERING IN NEW 
 // for (let i = 0; i < wizards.length; i++) {
@@ -99,8 +152,8 @@ const sortingForm = () => {
   const domString =
   `<form id= "nameEntry">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter name below</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputName1" class="form-label">Enter name below</label>
+    <input type="text" class="form-control" id="enterName" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">And we'll find out what school is best for you!</div>
   </div>
   <button type="submit" class="btn btn-primary">Lets wiz!</button>
@@ -113,24 +166,12 @@ const sortingForm = () => {
     <button type="button" class="btn btn-info">All</button>
   </div>
 </form>`;
-welcomeDiv.style.display = 'none';
+openingPageDiv.style.display = 'none';
 renderToDom('#mainPage', domString);
 }
 
 
 
-// *** Renders current students onto DOM
-// const cardsOnDom = (array) => {
-//   let domString = "";
-//   for (const wizards of array) {
-//     domString += `
-//   <div class="card" style="width: 18rem;">
-//     <h5 class="card-header">${wizards.name.toUpperCase()}</h5>
-//     <p class="list-group-item pet-color card">${wizards.house.toUpperCase()}</p>
-//     <button class="btn btn-success" id="delete--${wizards.id}">
-//     Expell </button>
-//   </div> `;
-//   };
 
 
   const filter = (member, typeString) => {
@@ -167,11 +208,6 @@ renderToDom('#mainPage', domString);
 // landingPage.addEventListener
 
 
-// // *** Populate DOM with HTML when button on welcome card is pressed THIS IS YOUR SORTING PAGE, NOT WELCOME. ****COME BACK TO THIS!!!!!!
-// const fillPage = () => {
-//   const bootstrapCardString = 
-//   `<button type="button" class="btn btn-success btn-lg">Getting Wizard with it</button>`
-// }
 
 // // *** PUTS THE CARDS IN DIFFERENT DIVS
 // const cardsInDivs = (array) => {
@@ -212,8 +248,8 @@ openingPageDiv.addEventListener('click', event => {
 
 // *** Initial Page Loadout
 const startApp = () => {
-  // welcomeCard();
   startingPage();
+  // sortingForm();
 }
 
 startApp();
