@@ -22,10 +22,11 @@
 - [Loom video](https://www.loom.com/share/16a5ade3719a443ba369337cfd21713a)
 
 ## Code Snippet
-- ![Snippet of code from project]<img width="513" alt="Screen Shot 2022-10-28 at 9 51 21 PM" src="https://user-images.githubusercontent.com/113221015/198789424-fa47516a-bb79-4575-9543-05513ac37834.png">
+- <img width="513" alt="Screen Shot 2022-10-28 at 9 51 21 PM" src="https://user-images.githubusercontent.com/113221015/198789424-fa47516a-bb79-4575-9543-05513ac37834.png">
 
 ## Project screenshot
-- ![Project screenshot](https://user-images.githubusercontent.com/113221015/198790852-a915b829-5764-4c08-874d-ac77a38e16a8.png)
+- <img width="1440" alt="Screen Shot 2022-10-28 at 9 55 26 PM" src="https://user-images.githubusercontent.com/113221015/198792905-0d8590fa-2c86-4c8d-9592-fd0065743b40.png">
+
 
 ## Contributors 
 - james-reinhardt1
