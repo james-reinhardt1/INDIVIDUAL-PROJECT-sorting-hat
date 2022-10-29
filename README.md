@@ -27,7 +27,8 @@
 
 ## Project screenshot
 - <img width="1440" alt="Screen Shot 2022-10-28 at 9 55 26 PM" src="https://user-images.githubusercontent.com/113221015/198792905-0d8590fa-2c86-4c8d-9592-fd0065743b40.png">
-- ![Screen Shot 2022-10-29 at 10 31 13 AM (2)](https://user-images.githubusercontent.com/113221015/198840113-5bba4be3-1b08-42b4-b301-46d76a5c9d12.png)
+- ![Screen Shot 2022-10-29 at 10 32 47 AM (2)](https://user-images.githubusercontent.com/113221015/198840264-08e266c2-04f9-46a0-ada2-b0f26dc86793.png)
+
 
 
 
