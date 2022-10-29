@@ -2,7 +2,7 @@
 
 ## Overview of Project
 - To sort new students entering Hogwarts into their respected houses and expell them if found to be evil!! 
-- [VSCode](http://127.0.0.1:8080/#)
+- [Launch Site](http://127.0.0.1:8080/#)
 
 ## Link to wireframe
 - [Wireframe](https://docs.google.com/presentation/d/1B3itkIAY1-uTx8GTdsQzDkCP_Pc6lojYEghlDPi7SRs/edit#slide=id.p)
