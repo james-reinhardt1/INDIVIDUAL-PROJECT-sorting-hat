@@ -1,3 +1,57 @@
+# HP SORTING HAT PROJECT
+
+# Overview of Project
+- To sort new students entering Hogwarts into their respected houses and expell them if found to be evil!! 
+- [This app was built using VSCode](http://127.0.0.1:8080/#)
+
+# Link to wireframe
+- [This was built using google presentation](https://docs.google.com/presentation/d/1B3itkIAY1-uTx8GTdsQzDkCP_Pc6lojYEghlDPi7SRs/edit#slide=id.p)
+
+# Link to data flow chart
+- [This was built using dbdiagram](https://dbdiagram.io/d/6345ff7ef0018a1c5fe3392e)
+
+# Description of the user and problem we are solving
+- The user for my program is someone who is looking to get into Hogwarts and become a wizard. The sorting hat chooses at random what house you will be assigned. This application was designed to reflect that and also expell any students who slack off or have become corrupted by he who may not be named. 
+
+# List of Features
+- When first accessing the site, you are introduced by the sorting hat. Selecting the button below will take you to the main page to find the right school for you.
+- Entering your name in the form will then assign you a house into the wizard school section
+-  Getting expelled will move you over to the Army of Darkness section 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Sorting Hat
 
 ## Goals
