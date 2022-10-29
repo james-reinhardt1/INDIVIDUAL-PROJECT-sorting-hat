@@ -20,6 +20,7 @@
 
 ## Relevent Link
 - [Loom video](https://www.loom.com/share/16a5ade3719a443ba369337cfd21713a)
+- [![Netlify Status](https://api.netlify.com/api/v1/badges/f52bf5db-996b-4475-8c0d-2d9224229d01/deploy-status)](https://app.netlify.com/sites/sorting-hat-project-ch21/deploys)
 
 ## Code Snippet
 - <img width="513" alt="Screen Shot 2022-10-28 at 9 51 21 PM" src="https://user-images.githubusercontent.com/113221015/198789424-fa47516a-bb79-4575-9543-05513ac37834.png">
