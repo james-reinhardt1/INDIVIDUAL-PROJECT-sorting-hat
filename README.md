@@ -18,7 +18,7 @@
 - Entering your name in the form will then assign you a house into the wizard school section
 -  Getting expelled will move you over to the Army of Darkness section 
 
-## Relevent Link
+## Relevant Link
 - [Loom video](https://www.loom.com/share/16a5ade3719a443ba369337cfd21713a)
 - [![Netlify Status](https://api.netlify.com/api/v1/badges/f52bf5db-996b-4475-8c0d-2d9224229d01/deploy-status)](https://app.netlify.com/sites/sorting-hat-project-ch21/deploys)
 
